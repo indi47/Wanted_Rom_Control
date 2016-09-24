@@ -47,7 +47,9 @@
         <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference
             android:defaultValue="#00000000"
             android:key="gear_second_gradient_color"
-            android:title="Secondary Color (for gradient)"/>
+            android:title="Secondary Color (for gradient)"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <com.wubydax.romcontrol.v2.prefs.MyListPreference
             android:defaultValue="0"
             android:entries="@array/gradient_entries"
