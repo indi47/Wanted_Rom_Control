@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_gravity="center" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.FloatingActionButton android:layout_gravity="center_horizontal" android:id="@id/rebootFab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/fab_margin" android:src="@drawable/ic_reboot" app:elevation="2.0dip" app:fabSize="normal" app:pressedTranslationZ="12.0dip" />
+    <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:id="@id/rebootText" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="@android:color/black" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="2.0" android:textAlignment="center" />
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" android:id="@id/main.appbar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="256.0dip">
+        <android.support.design.widget.CollapsingToolbarLayout android:id="@id/main.collapsing" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:contentScrim="?colorPrimary" app:titleEnabled="false">
+            <ImageView android:id="@id/main.backdrop" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/header1" android:scaleType="centerCrop" app:layout_collapseMode="parallax" />
+            <View android:background="@drawable/protective_view_gradient_top" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_collapseMode="parallax" />
+            <android.support.v7.widget.Toolbar android:id="@id/aboutToolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/ThemeOverlay.AppCompat.Light" app:layout_collapseMode="pin" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <include layout="@layout/about_activity_content" />
+</android.support.design.widget.CoordinatorLayout>
