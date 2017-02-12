@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:orientation="vertical" android:id="@id/rebootMenuMain" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wubydax="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/protectiveView" android:background="@drawable/protective_semi_transparent_black" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/rebootContainer" android:layout_width="wrap_content" android:layout_height="fill_parent" android:weightSum="3.0" android:layout_marginStart="72.0dip" android:layout_marginEnd="72.0dip">
+        <com.wubydax.romcontrol.v2.views.RebootView android:layout_gravity="center" android:id="@id/rebootDevice" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" wubydax:rebootText="@string/reboot_device_text" wubydax:rebootColor="@color/colorAccent" />
+        <com.wubydax.romcontrol.v2.views.RebootView android:layout_gravity="center" android:id="@id/rebootRecovery" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" wubydax:rebootText="@string/reboot_recovery_text" wubydax:rebootColor="@color/colorPrimary" />
+        <com.wubydax.romcontrol.v2.views.RebootView android:layout_gravity="center" android:id="@id/rebootUI" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" wubydax:rebootText="@string/reboot_ui_text" wubydax:rebootColor="@color/colorAccent" />
+    </LinearLayout>
+</FrameLayout>

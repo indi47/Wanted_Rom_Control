@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Do not forget to include this in any locale specific folders for translation-->
+
+    <!--In the following array put your changelog items
+    Take as many lines as you need.
+    Add as many items as you want or delete some if those are too many
+    This order is how they will appear in the dialog
+    Make any order you want from top to bottom-->
+    <string-array name="changelog_items">
+        <item>ROM INFORMATION</item>
+
+        <item>Stock Kernel</item>
+        <item>Based on G900HXXU1CPH5 INU Base and G935F APGF Base</item>
+        <item>Android Security Patch Level - September 1 2016</item>
+        <item>Full S7 Edge and Stock S5 Apps</item>
+        <item>Some Note 7 Apps</item>
+        <item>Some Note 7 Apps</item>
+        <item>DeOdexed</item>
+        <item>Zipaligned</item>
+        <item>Rooted</item>
+        <item>BusyBox Support</item>
+        <item>init.d Support</item>
+        <item>200% Knox Completely Removed</item>
+        <item>Removed few Bloatware Apps</item>
+        <item>Full Theme Support</item>
+        <item>S7Edge Edge Panel</item>
+        <item>Edge Lightning</item>
+        <item>Air Command</item>
+        <item>Fingerprint Works in Supported Apps, Except on Lockscreen</item>
+        <item>Full Working Game launcher and Game Tools</item>
+        <item>Added Build.prop Tweaks</item>
+        <item>Added CSC Tweaks</item>
+        <item>Added UPSM Tweaks</item>
+        <item>Added Multi Users support ( Both Guest and New Users Works )</item>
+    </string-array>
+
+    <!--This will be the dialog title.
+    Put your own rom version and name.
+    Have fun-->
+    <string name="rom_version_for_changelog">Wanted ROM</string>
+
+
+</resources>

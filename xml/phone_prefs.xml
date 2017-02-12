@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:wubydax="http://schemas.android.com/apk/res-auto" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.wubydax.romcontrol.v2.prefs.ImageHeaderPreference app:imageSource="@drawable/android" />
+    <PreferenceScreen android:title="Custom bg for IncallUI">
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Enable custom background" android:key="enable_gear_custom_bg" android:defaultValue="false" android:summaryOn="Enabled" android:summaryOff="Disabled" />
+        <PreferenceCategory android:title="General bg preferences" android:dependency="enable_gear_custom_bg">
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/custom_bg_type_entries" android:title="Background type" android:key="gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/custom_bg_type_values" app:dependentValue="0" />
+            <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Background opacity" android:key="gear_bg_opacity" android:defaultValue="255" app:minValue="0" app:maxValue="255" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Custom image preferences" android:dependency="enable_gear_custom_bg">
+            <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Select Bg image" android:key="gear_bg_image_uri" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/crop_entries" android:title="Set Image Scaling Type" android:key="gear_bg_crop_type" android:defaultValue="0" android:entryValues="@array/crop_values" />
+        </PreferenceCategory>
+        <PreferenceCategory android:title="Color and gradient preferences" android:dependency="enable_gear_custom_bg">
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Select primary color" android:key="gear_bg_primary_color" android:dependency="gear_custom_bg_type" android:defaultValue="\#00000000" />
+            <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Secondary Color (for gradient)" android:key="gear_second_gradient_color" android:dependency="gear_custom_bg_type" android:defaultValue="\#00000000" />
+            <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/gradient_entries" android:title="Gradient orientation" android:key="gear_bg_gradient_orientation" android:dependency="gear_custom_bg_type" android:defaultValue="0" android:entryValues="@array/gradient_values" />
+        </PreferenceCategory>
+    </PreferenceScreen>
+    <PreferenceScreen android:title="Dialpad Custom Backgrounds">
+        <PreferenceCategory android:title="Main Dialer Backgrounds and Colors" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Enable custom background" android:key="enable_dialer_custom_bg" android:defaultValue="false" android:summaryOn="Enabled \n> You must also enable custom colors and modify them or the dialpad will not be very visible." android:summaryOff="Disabled" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/custom_bg_type_entries" android:title="Background type" android:key="dialer_custom_bg_type" android:dependency="enable_dialer_custom_bg" android:defaultValue="0" android:entryValues="@array/custom_bg_type_values" />
+        <com.wubydax.romcontrol.v2.prefs.UriSelectionPreference android:title="Select image for Background" android:key="dialer_bg" android:dependency="enable_dialer_custom_bg" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/crop_entries" android:title="Set Image Scaling Type" android:key="dialer_crop_type" android:dependency="enable_dialer_custom_bg" android:defaultValue="0" android:entryValues="@array/crop_values" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Select primary color" android:key="dialer_bg_primary_color" android:dependency="enable_dialer_custom_bg" android:defaultValue="\#00000000" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Secondary Color (for gradient)" android:key="dialer_second_gradient_color" android:dependency="enable_dialer_custom_bg" android:defaultValue="\#00000000" />
+        <com.wubydax.romcontrol.v2.prefs.MyListPreference android:entries="@array/gradient_entries" android:title="Gradient orientation" android:key="dialer_bg_gradient_orientation" android:dependency="enable_dialer_custom_bg" android:defaultValue="0" android:entryValues="@array/gradient_values" />
+        <com.wubydax.romcontrol.v2.prefs.MySeekBarPreference android:title="Background Opacity" android:key="dialer_opacity" android:dependency="enable_dialer_custom_bg" android:defaultValue="255" app:maxValue="255" />
+        <PreferenceCategory android:title="Dialer Colors - disable if Theme conflicts" />
+        <com.wubydax.romcontrol.v2.prefs.MySwitchPreference android:title="Digit and Letter Colors On/Off Toggle" android:key="dialer_theme_override" android:defaultValue="false" android:summaryOn="Colors enabled" android:summaryOff="Colors disabled" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Dialer Digits" android:key="main_digit_color" android:summary="Set digit color" android:dependency="dialer_theme_override" android:defaultValue="\#ff000000" app:packageNameToKill="com.android.contacts" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Dialer Letters" android:key="main_letter_color" android:summary="Choose letter color" android:dependency="dialer_theme_override" android:defaultValue="\#ff000000" app:packageNameToKill="com.android.contacts" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Dialer Divider" android:key="main_divider_color" android:summary="Choose divider color" android:dependency="dialer_theme_override" android:defaultValue="\#ff000000" />
+        <com.wubydax.romcontrol.v2.prefs.ColorPickerPreference android:title="Dialer Digits Pressed" android:key="main_digit_color_pressed" android:summary="Set digit color" android:dependency="dialer_theme_override" android:defaultValue="\#ff000000" />
+    </PreferenceScreen>
+</PreferenceScreen>

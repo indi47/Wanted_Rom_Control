@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:orderInCategory="1" android:title="@string/more_options">
+        <menu>
+            <item android:icon="@drawable/ic_theme" android:id="@id/themes" android:title="@string/set_theme" />
+            <item android:icon="@drawable/ic_backup_restore" android:id="@id/backup_restore" android:title="@string/backup_and_restore" />
+            <item android:icon="@drawable/ic_info" android:id="@id/about_us" android:title="@string/about_us" />
+        </menu>
+    </item>
+</menu>
